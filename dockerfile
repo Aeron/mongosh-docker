@@ -15,7 +15,7 @@ ARG PGP_URL=https://www.mongodb.org/static/pgp
 ARG REPO_URL=https://repo.mongodb.org/apt/debian
 
 ARG MONGODB_VERSION=5.0
-ARG MONGOSH_VERSION=1.1.9
+ARG MONGOSH_VERSION=1.2.1
 
 RUN curl -fsSL ${PGP_URL}/server-${MONGODB_VERSION}.asc \
     | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-${MONGODB_VERSION}.gpg \
