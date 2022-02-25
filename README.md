@@ -9,13 +9,13 @@ A compact [`mongosh`](https://docs.mongodb.com/mongodb-shell/) Docker image base
 
 This image is available as [`aeron/mongosh`](https://hub.docker.com/r/aeron/mongosh)
 from Docker Hub and
-[`ghcr.io/Aeron/mongosh-docker`](https://github.com/Aeron/mongosh-docker) from GitHub
-Container Registry. You can use them both interchangeably.
+[`ghcr.io/Aeron/mongosh`](https://github.com/Aeron/mongosh-docker/pkgs/container/mongosh)
+from GitHub Container Registry. You can use them both interchangeably.
 
 ```sh
 docker pull aeron/mongosh
 # …or…
-docker pull ghcr.io/aeron/mongosh-docker
+docker pull ghcr.io/aeron/mongosh
 ```
 
 ### Interactive Mode (Docker)
