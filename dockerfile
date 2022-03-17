@@ -3,8 +3,6 @@ FROM bitnami/minideb:bullseye
 LABEL org.opencontainers.image.source https://github.com/Aeron/mongosh-docker
 LABEL org.opencontainers.image.licenses MIT
 
-ENV LANG C.UTF-8
-
 RUN install_packages \
     ca-certificates \
     curl \
@@ -15,7 +13,7 @@ ARG PGP_URL=https://www.mongodb.org/static/pgp
 ARG REPO_URL=https://repo.mongodb.org/apt/debian
 
 ARG MONGODB_VERSION=5.0
-ARG MONGOSH_VERSION=1.2.2
+ARG MONGOSH_VERSION=1.3.0
 
 RUN curl -fsSL ${PGP_URL}/server-${MONGODB_VERSION}.asc \
     | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-${MONGODB_VERSION}.gpg \
