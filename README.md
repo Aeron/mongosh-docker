@@ -33,8 +33,8 @@ supports could be provided alike:
 
 ```sh
 docker run -it --rm aeron/mongosh:latest -- $MONGO_URI \
-    --quiet \
-    --eval 'db.serverStatus()'
+    --nodb \
+    --eval 'disableTelemetry()'
 ```
 
 ### Interactive Mode (Kubernetes)
@@ -42,7 +42,7 @@ docker run -it --rm aeron/mongosh:latest -- $MONGO_URI \
 Run a container inside a Kube cluster in a similar manner:
 
 ```sh
-kubectl run mongosh --rm --tty -i --restart='Never' \
+kubectl run mongosh --rm --tty -i --restart=Never \
     --image aeron/mongosh:latest -- $MONGO_URI
 ```
 
