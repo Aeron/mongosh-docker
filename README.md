@@ -1,22 +1,26 @@
 # MongoDB Shell Docker Image
 
-A compact [`mongosh`](https://docs.mongodb.com/mongodb-shell/) Docker image based on
-[`bitnami/minideb`](https://hub.docker.com/r/bitnami/minideb) base image.
+A compact [`mongosh`][mongosh] Docker image based on [`bitnami/minideb`][bitnami]
+base image.
 
 **For interactive usage only**. No bells and whistles included.
 
+[mongosh]: https://docs.mongodb.com/mongodb-shell
+[bitnami]: https://hub.docker.com/r/bitnami/minideb
+
 ## Usage
 
-This image is available as [`aeron/mongosh`](https://hub.docker.com/r/aeron/mongosh)
-from Docker Hub and
-[`ghcr.io/Aeron/mongosh`](https://github.com/Aeron/mongosh-docker/pkgs/container/mongosh)
-from GitHub Container Registry. You can use them both interchangeably.
+This image is available as [`docker.io/aeron/mongosh`][docker] and
+[`ghcr.io/Aeron/mongosh`][github]. You can use them both interchangeably.
 
 ```sh
-docker pull aeron/mongosh
+docker pull docker.io/aeron/mongosh
 # …or…
 docker pull ghcr.io/aeron/mongosh
 ```
+
+[docker]: https://hub.docker.com/r/aeron/mongosh
+[github]: https://github.com/Aeron/mongosh-docker/pkgs/container/mongosh
 
 ### Interactive Mode (Docker)
 
@@ -28,14 +32,15 @@ docker run -it --rm aeron/mongosh:latest -- $MONGO_URI
 docker run -it --rm aeron/mongosh:latest -- mongodb://127.0.0.1:27017
 ```
 
-Any [CLI options](https://docs.mongodb.com/mongodb-shell/reference/options/) `mongosh`
-supports could be provided alike:
+Any [CLI options][options] `mongosh` supports could be provided alike:
 
 ```sh
 docker run -it --rm aeron/mongosh:latest -- $MONGO_URI \
     --nodb \
     --eval 'disableTelemetry()'
 ```
+
+[options]: https://docs.mongodb.com/mongodb-shell/reference/options
 
 ### Interactive Mode (Kubernetes)
 
