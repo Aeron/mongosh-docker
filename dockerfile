@@ -1,4 +1,4 @@
-FROM docker.io/bitnami/minideb:bullseye
+FROM docker.io/bitnami/minideb:bookworm
 
 LABEL org.opencontainers.image.source https://github.com/Aeron/mongosh-docker
 LABEL org.opencontainers.image.licenses MIT
@@ -13,7 +13,7 @@ ARG PGP_URL=https://www.mongodb.org/static/pgp
 ARG REPO_URL=https://repo.mongodb.org/apt/debian
 
 ARG MONGODB_VERSION=6.0
-ARG MONGOSH_VERSION=1.10.1
+ARG MONGOSH_VERSION=2.0.1
 
 RUN curl -fsSL ${PGP_URL}/server-${MONGODB_VERSION}.asc \
     | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-${MONGODB_VERSION}.gpg \
