@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Publish
 
 on:
   release:
@@ -11,7 +11,7 @@ env:
 
 jobs:
   build:
-    name: Build and push
+    name: Publish container image
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -19,13 +19,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
       - id: recase
         uses: ASzc/change-string-case-action@v6
         with:
           string: ${{ env.GITHUB_REGISTRY_IMAGE }}
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3.0.0
+        uses: docker/setup-qemu-action@v3
+        # NOTE: by default, it uses tonistiigi/binfmt:latest, and it is 7.0.0
+        with:
+          image: tonistiigi/binfmt:qemu-v8.1.5
       - name: Build Image
         id: build-image
         uses: redhat-actions/buildah-build@v2
