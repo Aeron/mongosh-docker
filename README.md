@@ -62,3 +62,11 @@ install the `coreutils` package and change Dockerfile’s entrypoint directive t
 `["sleep" "infinity"]`.
 
 Or use a different image that allows that. It’d be more painless, probably.
+
+## Acknowledgment
+
+The [`mongosh`][mongosh] is an open-source project made by [MongoDB Inc][mongodb] and
+its contributors, available under [Apache 2.0 license][license].
+
+[mongodb]: https://github.com/mongodb-js
+[license]: https://opensource.org/license/apache-2-0
