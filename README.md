@@ -3,7 +3,8 @@
 A compact [`mongosh`][mongosh] Docker image based on [`bitnami/minideb`][bitnami]
 base image.
 
-**For interactive usage only**. No bells and whistles included.
+> [!IMPORTANT]
+> **For interactive usage only**. No bells and whistles included.
 
 [mongosh]: https://docs.mongodb.com/mongodb-shell
 [bitnami]: https://hub.docker.com/r/bitnami/minideb
